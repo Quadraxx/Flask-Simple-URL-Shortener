@@ -1,31 +1,63 @@
-# 🔗 Flask URL Kısaltıcı (Simple-Shortener)
+# 🧑‍💻 Hüseyin Akın | Geliştirici Portfolyo Özeti
 
-## 📝 Proje Hakkında
+Bu README dosyası, geliştirici yolculuğumu, kişisel bilgilerimi ve aktif olarak üzerinde çalıştığım GitHub projelerini özetlemektedir.
 
-Bu proje, Python **Flask** mikro web çatısı (framework) ve **SQLite** (yerel veritabanı) kullanılarak geliştirilmiş basit bir URL kısaltma hizmetidir (URL Shortener). Kullanıcıların uzun bağlantıları, benzersiz ve kısa kodlara dönüştürmesini ve bu kodlar aracılığıyla orijinal adrese hızlıca yönlendirilmesini sağlar.
+## 👤 Hakkımda
 
-Proje, temel veritabanı işlemleri (CRUD) ve dinamik rota yönetimini öğrenmek amacıyla tasarlanmıştır.
-
-## ✨ Özellikler
-
-* **URL Kısaltma:** Rastgele oluşturulmuş 6 karakterli alfanümerik kısa kodlar üretir.
-* **Yönlendirme:** Kısa kodlar kullanılarak orijinal URL'ye anında yönlendirme (redirection).
-* **Veritabanı Desteği:** Verilerin yerel olarak depolanması için **SQLite3** kullanır.
-* **Arayüz:** Basit Bootstrap temelli kullanıcı arayüzü ile form ve kayıtlı link listesi sunar.
+* **Adı Soyadı:** Hüseyin Akın
+* **Yaş:** 18
+* **Memleket:** Denizli
+* **Eğitim Hedefi:** Torul MYO (Torul Meslek Yüksekokulu)
+* **GitHub:** [Quadraxx GitHub Profili](https://github.com/Quadraxx)
+* **LinkedIn:** [Hüseyin Akın'ın LinkedIn Profili](https://www.linkedin.com/in/h%C3%BCseyi-ak%C4%B1n-a8372928a/)
 
 ---
 
-## 🛠️ Kurulum ve Çalıştırma
+## 🚀 Geliştirilen Projeler
 
-Projeyi yerel bilgisayarınızda çalıştırmak için aşağıdaki adımları takip edin.
+Son çalışmalarım, ağırlıklı olarak Python (Flask) ve Web Geliştirme (HTML/CSS/JS) odaklıdır.
 
-### Ön Gereksinimler
+### 1. Flask URL Kısaltıcı (Simple-Shortener)
 
-* Python 3.x
-* `pip` (Python paket yöneticisi)
+| Detay | Açıklama |
+| :--- | :--- |
+| **Teknolojiler** | Python, Flask, Flask-SQLAlchemy, SQLite3, HTML, Bootstrap CSS |
+| **Amaç** | Uzun bir URL'yi benzersiz, 6 karakterli kısa bir koda dönüştürmeyi sağlayan basit bir hizmet oluşturmak. |
+| **Özellikler** | Rastgele kısa kod üretimi, yerel **SQLite** veritabanına kayıt, kısa kod ile orijinal adrese anında yönlendirme. |
+| **Kurulum Notu** | SQL Server bağlantısında yaşanan yetkilendirme sorunları nedeniyle hızlı geliştirme ve taşınabilirlik için SQLite'a çevrilmiştir. |
 
-### 1. Depoyu Klonlama ve Klasöre Geçiş
+### 2. Etkileşimli Dil Galerisi (Interactive Language Gallery)
 
-```bash
-git clone [https://github.com/Quadraxx/Flask-Simple-URL-Shortener.git](https://github.com/Quadraxx/Flask-Simple-URL-Shortener.git)
-cd Flask-Simple-URL-Shortener
+| Detay | Açıklama |
+| :--- | :--- |
+| **Teknolojiler** | HTML5, CSS3 (Grid/Flexbox), Vanilla JavaScript, Font Awesome |
+| **Amaç** | Popüler programlama dillerini (Python, JS, C#, SQL, Flask vb.) modern kart tasarımıyla sergilemek. |
+| **Özellikler** | Akıcı **Footer Bar** animasyonu (pop-up yerine), responsive Grid düzeni, kart üzerine gelindiğinde ikon ve renk animasyonları. |
+| **Tasarım Notu** | Minimalist ve modern web tasarım prensiplerini uygulamak amacıyla Grid/Flexbox ve CSS Transition kullanılarak geliştirilmiştir. |
+
+---
+
+## 🎯 Gelişim ve Kariyer Hedefleri
+
+### Yakın Dönem Odak Alanları
+
+1.  **Güvenlik Mekanizmaları:** Projelerimde şifre güvenliğini artırmak için **Werkzeug** kütüphanesindeki `check_password_hash` mekanizmasını derinlemesine incelemek.
+2.  **Veri Görselleştirme:** Flask backend'den gelen dinamik verileri (örneğin: Haftalık işlem sayısı) **Chart.js** kullanarak web arayüzünde (dashboard) grafiklerle görselleştirmeyi öğrenmek.
+3.  **Versiyonlama ve Loglama:** `TorulMYOHastane` projesine kullanıcı giriş/çıkışlarını takip eden detaylı bir log (kayıt) tablosu entegre etmek.
+
+### Kariyer Gelişimi
+
+* Projelerime ve yeteneklerime uygun olarak **LinkedIn profilimi profesyonelce güncellemek.**
+
+---
+
+## 🤝 İletişim
+
+Geri bildirim, işbirliği veya sorularınız için lütfen benimle iletişime geçmekten çekinmeyin.
+
+| Platform | Bağlantı |
+| :--- | :--- |
+| **GitHub** | [Quadraxx Profili](https://github.com/Quadraxx) |
+| **LinkedIn** | [Hüseyin Akın Profili](https://www.linkedin.com/in/h%C3%BCseyi-ak%C4%B1n-a8372928a/) |
+
+---
