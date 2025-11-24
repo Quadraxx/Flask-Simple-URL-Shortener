@@ -62,11 +62,6 @@ class UrlKayit(db.Model):
     short_code = db.Column(db.String(10), unique=True, nullable=False)
     created_at = db.Column(db.DateTime, default=db.func.now())
 ```
-# 🔗 Flask Simple URL Shortener
-
-Python (Flask) ve SQLAlchemy kullanılarak geliştirilmiş, hızlı, güvenli ve veritabanı destekli bir URL kısaltma servisi. Uzun ve karmaşık linkleri, paylaşılması kolay kısa kodlara dönüştürür.
-
-![Uygulama Ekran Görüntüsü](assets/screenshot.png)
 ## ⚙️ Teknik Mimari ve Mantık
 
 ### A. Veritabanı Şeması (Database Schema)
