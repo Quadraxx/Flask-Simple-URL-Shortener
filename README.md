@@ -61,3 +61,53 @@ class UrlKayit(db.Model):
     original_url = db.Column(db.String(500), nullable=False)
     short_code = db.Column(db.String(10), unique=True, nullable=False)
     created_at = db.Column(db.DateTime, default=db.func.now())
+```
+# 🔗 Flask Simple URL Shortener
+
+Python (Flask) ve SQLAlchemy kullanılarak geliştirilmiş, hızlı, güvenli ve veritabanı destekli bir URL kısaltma servisi. Uzun ve karmaşık linkleri, paylaşılması kolay kısa kodlara dönüştürür.
+
+![Uygulama Ekran Görüntüsü](assets/screenshot.png)
+## ⚙️ Teknik Mimari ve Mantık
+
+### A. Veritabanı Şeması (Database Schema)
+Veriler SQLite veritabanında `UrlKayit` modeli ile tutulur:
+
+* **id:** Kayıtların benzersiz kimliğidir (Primary Key, Auto-Increment).
+* **original_url:** Kullanıcının girdiği hedef link (String).
+* **short_code:** URL'yi temsil eden 6 karakterli anahtar. `unique=True` kısıtlaması ile veritabanı seviyesinde bütünlük korunur.
+* **created_at:** Analitik ve raporlama için kaydın oluşturulma zamanı (DateTime).
+
+### B. Kısaltma Algoritması ve Çarpışma Kontrolü
+Sistem, `generate_short_code()` fonksiyonu ile rastgele kod üretir.
+
+* **Karakter Havuzu:** A-Z, a-z ve 0-9 (Toplam 62 karakter).
+* **Kombinasyon:** 6 karakterli bir kod için $62^6$ (yaklaşık 56 milyar) olası kombinasyon sunar.
+* **Çarpışma (Collision) Yönetimi:**
+    1.  Algoritma bir kod üretir.
+    2.  Veritabanında `UrlKayit.query.filter_by(short_code=code)` sorgusu çalıştırılır.
+    3.  Eğer kod zaten varsa, döngü başa döner ve yeni bir kod üretir (Retry Logic).
+    4.  Eğer kod yoksa, veritabanına yazılır.
+
+### C. HTTP Yönlendirme Mantığı
+Kullanıcı kısa linke tıkladığında (örneğin `/abc1234`), Flask dinamik rotası devreye girer:
+
+1.  Gelen `short_code` parametresi veritabanında aranır.
+2.  **Kayıt bulunursa:** Kullanıcı `redirect(original_url)` fonksiyonu ile **HTTP 302 (Temporary Redirect)** statüsü ile yönlendirilir.
+3.  **Kayıt bulunamazsa:** Kullanıcıya hata mesajı (Flash Message) gösterilir ve ana sayfaya yönlendirilir.
+
+---
+
+## 💻 Kurulum ve Yerel Geliştirme
+
+Projeyi yerel makinenizde (Localhost) çalıştırmak için aşağıdaki adımları eksiksiz uygulayın.
+
+### Ön Gereksinimler
+* Python 3.8 veya üzeri
+* Git SCM
+
+### Adım 1: Projeyi Klonlama
+Terminal veya Komut Satırını açın ve projeyi bilgisayarınıza indirin:
+
+```bash
+git clone [https://github.com/Quadraxx/Flask-Simple-URL-Shortener.git](https://github.com/Quadraxx/Flask-Simple-URL-Shortener.git)
+cd Flask-Simple-URL-Shortener
